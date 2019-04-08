@@ -129,7 +129,7 @@ fpsClock = pygame.time.Clock()
 
 screen = pygame.display.set_mode((screenWidth, screenHeight), DOUBLEBUF)
 
-font = pygame.font.Font('assets/final_data/Pixel Emulator.otf',20)
+font = pygame.font.Font('final_data/Pixel Emulator.otf',20)
 text_season = [font.render(text[0],True,text[1]) for text in (('spring',(240,128,128)),\
                                                               ('summer',(34 ,139,34 )),\
                                                               ('fall'  ,(218,165,32 )),\
@@ -158,17 +158,17 @@ def loadAllImages():
     # width_difference_compared_to_normal_tile,
     # height_difference_compared_to_normal_tile,
     # height_multiplier_tab_indice),
-    (loadImage('assets/final_data/cliffBrown_blockQuarterDark_NW.png'  ,72 ,151),0,0,2), #ground for water  #0
-    (loadImage('assets/final_data/cliffGrey_blockHalf_NW.png'          ,95 ,151),0,0,1), #ground1_half      #1 
-    (loadImage('assets/final_data/cliffGrey_blockQuarter_NW.png'       ,72 ,151),0,0,2), #ground1_quarter   #2 
+    (loadImage('final_data/cliffBrown_blockQuarterDark_NW.png'  ,72 ,151),0,0,2), #ground for water  #0
+    (loadImage('final_data/cliffGrey_blockHalf_NW.png'          ,95 ,151),0,0,1), #ground1_half      #1 
+    (loadImage('final_data/cliffGrey_blockQuarter_NW.png'       ,72 ,151),0,0,2), #ground1_quarter   #2 
 
-    (loadImage('assets/final_data/platformerTile_09.png' ,107,151),0,0,0),           #ground3           #3
-    (loadImage('assets/final_data/platformerTile_06.png' ,95,151),0,0,0),            #ground1_half snow #4
-    (loadImage('assets/final_data/platformerTile_08.png' ,107,151),0,0,0),           #ground3 snow      #5
+    (loadImage('final_data/platformerTile_09.png' ,107,151),0,0,0),           #ground3           #3
+    (loadImage('final_data/platformerTile_06.png' ,95,151),0,0,0),            #ground1_half snow #4
+    (loadImage('final_data/platformerTile_08.png' ,107,151),0,0,0),           #ground3 snow      #5
 
-    (loadImage('assets/final_data/cliffBrown_blockHalf_NW.png'     ,95 ,151),0,0,1),  #ground2_half      #6
-    (loadImage('assets/final_data/cliffBrown_blockQuarter_NW.png'  ,72 ,151),0,0,2),  #ground2_quarter   #7
-    (loadImage('assets/final_data/blockSnow_NW.png'                ,107,151),0,0,1)   #ground2 snow      #8
+    (loadImage('final_data/cliffBrown_blockHalf_NW.png'     ,95 ,151),0,0,1),  #ground2_half      #6
+    (loadImage('final_data/cliffBrown_blockQuarter_NW.png'  ,72 ,151),0,0,2),  #ground2_quarter   #7
+    (loadImage('final_data/blockSnow_NW.png'                ,107,151),0,0,1)   #ground2 snow      #8
     ]
 
     objectType = []
@@ -178,160 +178,159 @@ def loadAllImages():
     # height_multiplier_tab_indice),
 
     objectType.append(None) # default -- never drawn
-    objectType.append((loadImage('assets/final_data/tree_small_NW_ret_red.png',107,151),0,0,0))    # burning tree  #1
-    objectType.append((loadImage('assets/final_data/campfireStones_rocks_NW.png',72,120),0,0,2))   # ashes         #2
-    objectType.append((loadImage('assets/final_data/grass_on_fire2.png',52,39),60,20,0))           # burning grass #3
+    objectType.append((loadImage('final_data/tree_small_NW_ret_red.png',107,151),0,0,0))    # burning tree  #1
+    objectType.append((loadImage('final_data/campfireStones_rocks_NW.png',72,120),0,0,2))   # ashes         #2
+    objectType.append((loadImage('final_data/grass_on_fire2.png',52,39),60,20,0))           # burning grass #3
 
-    objectType.append((loadImage('assets/final_data/tree_oak_dark_NE.png',95,77),45,-5,0)) # oak tree spring      #4
-    objectType.append((loadImage('assets/final_data/tree_oak_NE.png'     ,95,77),45,-5,0)) # oak tree summer      #5
-    objectType.append((loadImage('assets/final_data/tree_oak_fall_NE.png',95,77),45,-5,0)) # oak tree fall        #6
+    objectType.append((loadImage('final_data/tree_oak_dark_NE.png',95,77),45,-5,0)) # oak tree spring      #4
+    objectType.append((loadImage('final_data/tree_oak_NE.png'     ,95,77),45,-5,0)) # oak tree summer      #5
+    objectType.append((loadImage('final_data/tree_oak_fall_NE.png',95,77),45,-5,0)) # oak tree fall        #6
+
+    objectType.append((loadImage('final_data/tree_thin_dark_SW.png',95,77),45,-5,0)) # tree thin spring #7
+    objectType.append((loadImage('final_data/tree_thin_SW.png'     ,95,77),45,-5,0)) # tree thin summer #8
+    objectType.append((loadImage('final_data/tree_thin_fall_SW.png',95,77),45,-5,0)) # tree thin fall   #9
+
+    objectType.append((loadImage('final_data/tree_tall_dark_NW.png',85,35),45,-5,0)) # tree tall spring #10
+    objectType.append((loadImage('final_data/tree_tall_NW.png'     ,85,35),45,-5,0)) # tree tall summer #11
+    objectType.append((loadImage('final_data/tree_tall_fall_NW.png',85,35),45,-5,0)) # tree tall fall   #12
+
+    objectType.append((loadImage('final_data/tree_simple_dark_NW.png',95,50),45,-5,0)) # tree simple spring #13
+    objectType.append((loadImage('final_data/tree_simple_NW.png'     ,95,50),45,-5,0)) # tree simple winter #14
+    objectType.append((loadImage('final_data/tree_simple_fall_NW.png',95,50),45,-5,0)) # tree simple fall   #15
+
+    objectType.append((loadImage('final_data/tree_pine_tall_detailed_SE.png'  ,95,58),45,-5,0))   # pine tree tall          #16
+    objectType.append((loadImage('final_data/tree_pine_short_detailed_NE.png' ,85,57),45,-5,0))   # pine tree short         #17
+    objectType.append((loadImage('final_data/tree_pineSmall_round3_NW.png'    ,80,57),45,-5,0))   # pine tree small round3  #18
+    objectType.append((loadImage('final_data/tree_pineSmall_round4_NE.png'    ,70,57),45,-5,0))   # pine tree small round4  #19
+    objectType.append((loadImage('final_data/tree_pineSmall_round5_NW.png'    ,80,63),45,-5,0))   # pine tree small round5  #20
+
+    objectType.append((loadImage('final_data/flower_red3_NE.png'    ,23,16),45,50,0))   # red flower    #21
+    objectType.append((loadImage('final_data/flower_beige3_NE.png'  ,23,16),45,50,0))   # beige flower  #22
+    objectType.append((loadImage('final_data/grass_dense_SE.png'    ,30,50),45,50,0))   # grass         #23
+    objectType.append((loadImage('final_data/plant_bush_SE.png'         ,30,32),45,50,0))  # plant bush          #24
+    objectType.append((loadImage('final_data/plant_bushDetailed_SE.png' ,51,47),45,50,0))  # plant bush detailed #25
+    objectType.append((loadImage('final_data/mushroom_redGroup_SE.png'   ,33,28),45,50,0)) # mushroom            #26
+
+    objectType.append((loadImage('final_data/treePineSnowRound_NE.png' ,80,63),45,-5,0))   # pine tree short half snowed  #27
+    objectType.append((loadImage('final_data/treePineSnowRound.png'    ,95,58),45,-5,0))   # pine tree tall half snowed   #28
+    objectType.append((loadImage('final_data/treePineSnowedFull_SW.png',80,63),45,-5,0))   # pine tree short full snowed  #29
+    objectType.append((loadImage('final_data/treePineSnowedFull.png'   ,95,58),45,-5,0))   # pine tree tall full snowed   #30
+    objectType.append((loadImage('final_data/treeSnow_NW.png'          ,95,77),45,-5,0))   # tree full snowed             #31
+
+    objectType.append((loadImage('final_data/cliffGrey_blockHalf_NW.png'      ,95 ,151),0,0,1))  #ground2 half    #32 
+    objectType.append((loadImage('final_data/cliffGrey_block_NW.png'          ,107,151),0,0,0))  #ground2         #33
+    objectType.append((loadImage('final_data/cliffGrey_blockQuarter_NW.png'   ,72 ,151),0,0,2))  #ground2 quarter #34
+    objectType.append((loadImage('final_data/platformerTile_12.png'           ,107,151),0,0,0))  #ground1 snow    #35
 
 
-    objectType.append((loadImage('assets/final_data/tree_thin_dark_SW.png',95,77),45,-5,0)) # tree thin spring #7
-    objectType.append((loadImage('assets/final_data/tree_thin_SW.png'     ,95,77),45,-5,0)) # tree thin summer #8
-    objectType.append((loadImage('assets/final_data/tree_thin_fall_SW.png',95,77),45,-5,0)) # tree thin fall   #9
+    objectType.append((loadImage('final_data/cliffBrown_cornerInnerTop_SE.png',89 ,151),0,0,0))  #brown corner rectangular edge SE #36
+    objectType.append((loadImage('final_data/cliffBrown_cornerInnerTop_SW.png',107,110),41,0,0)) #brown corner rectangular edge SW #37
+    objectType.append((loadImage('final_data/cliffBrown_cornerInnerTop_NE.png',89 ,151),0,21,0)) #brown corner rectangular edge NE #38
+    objectType.append((loadImage('final_data/cliffBrown_cornerInnerTop_NW.png',107,110),0,0,0))  #brown corner rectangular edge NW #39
 
-    objectType.append((loadImage('assets/final_data/tree_tall_dark_NW.png',85,35),45,-5,0)) # tree tall spring #10
-    objectType.append((loadImage('assets/final_data/tree_tall_NW.png'     ,85,35),45,-5,0)) # tree tall summer #11
-    objectType.append((loadImage('assets/final_data/tree_tall_fall_NW.png',85,35),45,-5,0)) # tree tall fall   #12
+    objectType.append((loadImage('final_data/cliffGrey_cornerInnerTop_SE.png',89 ,151),0,0,0))  #grey corner rectangular edge SE #40
+    objectType.append((loadImage('final_data/cliffGrey_cornerInnerTop_SW.png',107,110),41,0,0)) #grey corner rectangular edge SW #41
+    objectType.append((loadImage('final_data/cliffGrey_cornerInnerTop_NE.png',89 ,151),0,21,0)) #grey corner rectangular edge NE #42
+    objectType.append((loadImage('final_data/cliffGrey_cornerInnerTop_NW.png',107,110),0,0,0))  #grey corner rectangular edge SW #43
 
-    objectType.append((loadImage('assets/final_data/tree_simple_dark_NW.png',95,50),45,-5,0)) # tree simple spring #13
-    objectType.append((loadImage('assets/final_data/tree_simple_NW.png'     ,95,50),45,-5,0)) # tree simple winter #14
-    objectType.append((loadImage('assets/final_data/tree_simple_fall_NW.png',95,50),45,-5,0)) # tree simple fall   #15
+    objectType.append((loadImage('final_data/cliffBrown_top_SE.png'           ,89,110),0,0,0))   #brown edge top SE #44
+    objectType.append((loadImage('final_data/cliffBrown_top_SW.png'           ,89,110),41,0,0))  #brown edge top SW #45
+    objectType.append((loadImage('final_data/cliffBrown_top_NE.png'           ,89,110),41,21,0)) #brown edge top NE #46
+    objectType.append((loadImage('final_data/cliffBrown_top_NW.png'           ,89,110),0,21,0))  #brown edge top NW #47
 
-    objectType.append((loadImage('assets/final_data/tree_pine_tall_detailed_SE.png'  ,95,58),45,-5,0))   # pine tree tall          #16
-    objectType.append((loadImage('assets/final_data/tree_pine_short_detailed_NE.png' ,85,57),45,-5,0))   # pine tree short         #17
-    objectType.append((loadImage('assets/final_data/tree_pineSmall_round3_NW.png'    ,80,57),45,-5,0))   # pine tree small round3  #18
-    objectType.append((loadImage('assets/final_data/tree_pineSmall_round4_NE.png'    ,70,57),45,-5,0))   # pine tree small round4  #19
-    objectType.append((loadImage('assets/final_data/tree_pineSmall_round5_NW.png'    ,80,63),45,-5,0))   # pine tree small round5  #20
+    objectType.append((loadImage('final_data/cliffGrey_top_SE.png'            ,89,110),0,0,0))   #grey edge top SE #48
+    objectType.append((loadImage('final_data/cliffGrey_top_SW.png'            ,89,110),41,0,0))  #grey edge top SW #49
+    objectType.append((loadImage('final_data/cliffGrey_top_NE.png'            ,89,110),41,21,0)) #grey edge top NE #50
+    objectType.append((loadImage('final_data/cliffGrey_top_NW.png'            ,89,110),0,21,0))  #grey edge top NW #51
 
-    objectType.append((loadImage('assets/final_data/flower_red3_NE.png'    ,23,16),45,50,0))   # red flower    #21
-    objectType.append((loadImage('assets/final_data/flower_beige3_NE.png'  ,23,16),45,50,0))   # beige flower  #22
-    objectType.append((loadImage('assets/final_data/grass_dense_SE.png'    ,30,50),45,50,0))   # grass         #23
-    objectType.append((loadImage('assets/final_data/plant_bush_SE.png'         ,30,32),45,50,0))  # plant bush          #24
-    objectType.append((loadImage('assets/final_data/plant_bushDetailed_SE.png' ,51,47),45,50,0))  # plant bush detailed #25
-    objectType.append((loadImage('assets/final_data/mushroom_redGroup_SE.png'   ,33,28),45,50,0)) # mushroom            #26
-
-    objectType.append((loadImage('assets/final_data/treePineSnowRound_NE.png' ,80,63),45,-5,0))   # pine tree short half snowed  #27
-    objectType.append((loadImage('assets/final_data/treePineSnowRound.png'    ,95,58),45,-5,0))   # pine tree tall half snowed   #28
-    objectType.append((loadImage('assets/final_data/treePineSnowedFull_SW.png',80,63),45,-5,0))   # pine tree short full snowed  #29
-    objectType.append((loadImage('assets/final_data/treePineSnowedFull.png'   ,95,58),45,-5,0))   # pine tree tall full snowed   #30
-    objectType.append((loadImage('assets/final_data/treeSnow_NW.png'          ,95,77),45,-5,0))   # tree full snowed             #31
-
-    objectType.append((loadImage('assets/final_data/cliffGrey_blockHalf_NW.png'      ,95 ,151),0,0,1))  #ground2 half    #32 
-    objectType.append((loadImage('assets/final_data/cliffGrey_block_NW.png'          ,107,151),0,0,0))  #ground2         #33
-    objectType.append((loadImage('assets/final_data/cliffGrey_blockQuarter_NW.png'   ,72 ,151),0,0,2))  #ground2 quarter #34
-    objectType.append((loadImage('assets/final_data/platformerTile_12.png'           ,107,151),0,0,0))  #ground1 snow    #35
-
-
-    objectType.append((loadImage('assets/final_data/cliffBrown_cornerInnerTop_SE.png',89 ,151),0,0,0))  #brown corner rectangular edge SE #36
-    objectType.append((loadImage('assets/final_data/cliffBrown_cornerInnerTop_SW.png',107,110),41,0,0)) #brown corner rectangular edge SW #37
-    objectType.append((loadImage('assets/final_data/cliffBrown_cornerInnerTop_NE.png',89 ,151),0,21,0)) #brown corner rectangular edge NE #38
-    objectType.append((loadImage('assets/final_data/cliffBrown_cornerInnerTop_NW.png',107,110),0,0,0))  #brown corner rectangular edge NW #39
-
-    objectType.append((loadImage('assets/final_data/cliffGrey_cornerInnerTop_SE.png',89 ,151),0,0,0))  #grey corner rectangular edge SE #40
-    objectType.append((loadImage('assets/final_data/cliffGrey_cornerInnerTop_SW.png',107,110),41,0,0)) #grey corner rectangular edge SW #41
-    objectType.append((loadImage('assets/final_data/cliffGrey_cornerInnerTop_NE.png',89 ,151),0,21,0)) #grey corner rectangular edge NE #42
-    objectType.append((loadImage('assets/final_data/cliffGrey_cornerInnerTop_NW.png',107,110),0,0,0))  #grey corner rectangular edge SW #43
-
-    objectType.append((loadImage('assets/final_data/cliffBrown_top_SE.png'           ,89,110),0,0,0))   #brown edge top SE #44
-    objectType.append((loadImage('assets/final_data/cliffBrown_top_SW.png'           ,89,110),41,0,0))  #brown edge top SW #45
-    objectType.append((loadImage('assets/final_data/cliffBrown_top_NE.png'           ,89,110),41,21,0)) #brown edge top NE #46
-    objectType.append((loadImage('assets/final_data/cliffBrown_top_NW.png'           ,89,110),0,21,0))  #brown edge top NW #47
-
-    objectType.append((loadImage('assets/final_data/cliffGrey_top_SE.png'            ,89,110),0,0,0))   #grey edge top SE #48
-    objectType.append((loadImage('assets/final_data/cliffGrey_top_SW.png'            ,89,110),41,0,0))  #grey edge top SW #49
-    objectType.append((loadImage('assets/final_data/cliffGrey_top_NE.png'            ,89,110),41,21,0)) #grey edge top NE #50
-    objectType.append((loadImage('assets/final_data/cliffGrey_top_NW.png'            ,89,110),0,21,0))  #grey edge top NW #51
-
-    objectType.append((loadImage('assets/final_data/cliffGrey_cornerInnerMid_SE.png' ,89 ,151),0,0,0))  #grey corner rectangular edge mid SE #52
-    objectType.append((loadImage('assets/final_data/cliffGrey_cornerInnerMid_SW.png' ,107,110),41,0,0)) #grey corner rectangular edge mid SW #53
-    objectType.append((loadImage('assets/final_data/cliffGrey_cornerInnerMid_NE.png' ,89 ,151),0,21,0)) #grey corner rectangular edge mid NE #54
-    objectType.append((loadImage('assets/final_data/cliffGrey_cornerInnerMid_NW.png' ,107,110),0,0,0))  #grey corner rectangular edge mid NW #55
+    objectType.append((loadImage('final_data/cliffGrey_cornerInnerMid_SE.png' ,89 ,151),0,0,0))  #grey corner rectangular edge mid SE #52
+    objectType.append((loadImage('final_data/cliffGrey_cornerInnerMid_SW.png' ,107,110),41,0,0)) #grey corner rectangular edge mid SW #53
+    objectType.append((loadImage('final_data/cliffGrey_cornerInnerMid_NE.png' ,89 ,151),0,21,0)) #grey corner rectangular edge mid NE #54
+    objectType.append((loadImage('final_data/cliffGrey_cornerInnerMid_NW.png' ,107,110),0,0,0))  #grey corner rectangular edge mid NW #55
     
-    objectType.append((loadImage('assets/final_data/cliffGrey_SE.png'                ,89,110),0,0,0))   #grey edge mid SE #56
-    objectType.append((loadImage('assets/final_data/cliffGrey_SW.png'                ,89,110),41,0,0))  #grey edge mid SW #57
-    objectType.append((loadImage('assets/final_data/cliffGrey_NE.png'                ,89,110),41,21,0)) #grey edge mid NE #58
-    objectType.append((loadImage('assets/final_data/cliffGrey_NW.png'                ,89,110),0,21,0))  #grey edge mid NW #59
+    objectType.append((loadImage('final_data/cliffGrey_SE.png'                ,89,110),0,0,0))   #grey edge mid SE #56
+    objectType.append((loadImage('final_data/cliffGrey_SW.png'                ,89,110),41,0,0))  #grey edge mid SW #57
+    objectType.append((loadImage('final_data/cliffGrey_NE.png'                ,89,110),41,21,0)) #grey edge mid NE #58
+    objectType.append((loadImage('final_data/cliffGrey_NW.png'                ,89,110),0,21,0))  #grey edge mid NW #59
 
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverWater_NW.png'    ,72,151),0,0,2))     #active water    #60
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverWater_NW.png'    ,72,151),0,0,2))     #static water    #61
+    objectType.append((loadImage('final_data/ground_dirtRiverWater_NW.png'    ,72,151),0,0,2))     #active water    #60
+    objectType.append((loadImage('final_data/ground_dirtRiverWater_NW.png'    ,72,151),0,0,2))     #static water    #61
 ################################################################################################################################# minus 12
-    objectType.append((loadImage('assets/final_data/cliffBrown_waterfallTop_SE.png'  ,89,110),0,0,0))   #brown waterfall top SE #74
-    objectType.append((loadImage('assets/final_data/cliffBrown_waterfallTop_SW.png'  ,89,110),41,0,0))  #brown waterfall top SW #75
-    objectType.append((loadImage('assets/final_data/cliffBrown_waterfallTop_NE.png'  ,89,110),41,21,0)) #brown waterfall top NE #76
-    objectType.append((loadImage('assets/final_data/cliffBrown_waterfallTop_NW.png'  ,89,110),0,21,0))  #brown waterfall top NW #77
+    objectType.append((loadImage('final_data/cliffBrown_waterfallTop_SE.png'  ,89,110),0,0,0))   #brown waterfall top SE #74
+    objectType.append((loadImage('final_data/cliffBrown_waterfallTop_SW.png'  ,89,110),41,0,0))  #brown waterfall top SW #75
+    objectType.append((loadImage('final_data/cliffBrown_waterfallTop_NE.png'  ,89,110),41,21,0)) #brown waterfall top NE #76
+    objectType.append((loadImage('final_data/cliffBrown_waterfallTop_NW.png'  ,89,110),0,21,0))  #brown waterfall top NW #77
 
-    objectType.append((loadImage('assets/final_data/cliffGrey_waterfallTop_SE.png'  ,89,110),0,0,0))   #grey waterfall top SE #78
-    objectType.append((loadImage('assets/final_data/cliffGrey_waterfallTop_SW.png'  ,89,110),41,0,0))  #grey waterfall top SW #79
-    objectType.append((loadImage('assets/final_data/cliffGrey_waterfallTop_NE.png'  ,89,110),41,21,0)) #grey waterfall top NE #80
-    objectType.append((loadImage('assets/final_data/cliffGrey_waterfallTop_NW.png'  ,89,110),0,21,0))  #grey waterfall top NW #81
+    objectType.append((loadImage('final_data/cliffGrey_waterfallTop_SE.png'  ,89,110),0,0,0))   #grey waterfall top SE #78
+    objectType.append((loadImage('final_data/cliffGrey_waterfallTop_SW.png'  ,89,110),41,0,0))  #grey waterfall top SW #79
+    objectType.append((loadImage('final_data/cliffGrey_waterfallTop_NE.png'  ,89,110),41,21,0)) #grey waterfall top NE #80
+    objectType.append((loadImage('final_data/cliffGrey_waterfallTop_NW.png'  ,89,110),0,21,0))  #grey waterfall top NW #81
 
-    objectType.append((loadImage('assets/final_data/cliffGrey_waterfallMid_SE.png'  ,89,110),0,0,0))   #grey waterfall mid SE #82
-    objectType.append((loadImage('assets/final_data/cliffGrey_waterfallMid_SW.png'  ,89,110),41,0,0))  #grey waterfall mid SW #83
-    objectType.append((loadImage('assets/final_data/cliffGrey_waterfallMid_NE.png'  ,89,110),41,21,0)) #grey waterfall mid NE #84
-    objectType.append((loadImage('assets/final_data/cliffGrey_waterfallMid_NW.png'  ,89,110),0,21,0))  #grey waterfall mid NW #85
+    objectType.append((loadImage('final_data/cliffGrey_waterfallMid_SE.png'  ,89,110),0,0,0))   #grey waterfall mid SE #82
+    objectType.append((loadImage('final_data/cliffGrey_waterfallMid_SW.png'  ,89,110),41,0,0))  #grey waterfall mid SW #83
+    objectType.append((loadImage('final_data/cliffGrey_waterfallMid_NE.png'  ,89,110),41,21,0)) #grey waterfall mid NE #84
+    objectType.append((loadImage('final_data/cliffGrey_waterfallMid_NW.png'  ,89,110),0,21,0))  #grey waterfall mid NW #85
 
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverSideCorner_SE.png',72,151),0,0,2))    #riverSideCorner_SE #86
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverSideCorner_SW.png',72,151),0,0,2))    #riverSideCorner_SW #87
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverSideCorner_NE.png',72,151),0,0,2))    #riverSideCorner_NE #88
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverSideCorner_NW.png',72,151),0,0,2))    #riverSideCorner_NW #89
+    objectType.append((loadImage('final_data/ground_dirtRiverSideCorner_SE.png',72,151),0,0,2))    #riverSideCorner_SE #86
+    objectType.append((loadImage('final_data/ground_dirtRiverSideCorner_SW.png',72,151),0,0,2))    #riverSideCorner_SW #87
+    objectType.append((loadImage('final_data/ground_dirtRiverSideCorner_NE.png',72,151),0,0,2))    #riverSideCorner_NE #88
+    objectType.append((loadImage('final_data/ground_dirtRiverSideCorner_NW.png',72,151),0,0,2))    #riverSideCorner_NW #89
 
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverCornerInner_SE.png',72,151),0,0,2))    #riverInnerCorner_SE #90
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverCornerInner_SW.png',72,151),0,0,2))    #riverInnerCorner_SW #91
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverCornerInner_NE.png',72,151),0,0,2))    #riverInnerCorner_NE #92
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverCornerInner_NW.png',72,151),0,0,2))    #riverInnerCorner_NW #93
+    objectType.append((loadImage('final_data/ground_dirtRiverCornerInner_SE.png',72,151),0,0,2))    #riverInnerCorner_SE #90
+    objectType.append((loadImage('final_data/ground_dirtRiverCornerInner_SW.png',72,151),0,0,2))    #riverInnerCorner_SW #91
+    objectType.append((loadImage('final_data/ground_dirtRiverCornerInner_NE.png',72,151),0,0,2))    #riverInnerCorner_NE #92
+    objectType.append((loadImage('final_data/ground_dirtRiverCornerInner_NW.png',72,151),0,0,2))    #riverInnerCorner_NW #93
 
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverSide_SE.png',72,151),0,0,2))    #riverSide_SE #94
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverSide_SW.png',72,151),0,0,2))    #riverSide_SW #95
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverSide_NE.png',72,151),0,0,2))    #riverSide_NE #96
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverSide_NW.png',72,151),0,0,2))    #riverSide_NW #97
+    objectType.append((loadImage('final_data/ground_dirtRiverSide_SE.png',72,151),0,0,2))    #riverSide_SE #94
+    objectType.append((loadImage('final_data/ground_dirtRiverSide_SW.png',72,151),0,0,2))    #riverSide_SW #95
+    objectType.append((loadImage('final_data/ground_dirtRiverSide_NE.png',72,151),0,0,2))    #riverSide_NE #96
+    objectType.append((loadImage('final_data/ground_dirtRiverSide_NW.png',72,151),0,0,2))    #riverSide_NW #97
 
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverEntrance_SE.png',72,151),0,0,2))    #riverEntrance_SE #98
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverEntrance_SW.png',72,151),0,0,2))    #riverEntrance_SW #99
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverEntrance_NE.png',72,151),0,0,2))    #riverEntrance_NE #100
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverEntrance_NW.png',72,151),0,0,2))    #riverEntrance_NW #101
+    objectType.append((loadImage('final_data/ground_dirtRiverEntrance_SE.png',72,151),0,0,2))    #riverEntrance_SE #98
+    objectType.append((loadImage('final_data/ground_dirtRiverEntrance_SW.png',72,151),0,0,2))    #riverEntrance_SW #99
+    objectType.append((loadImage('final_data/ground_dirtRiverEntrance_NE.png',72,151),0,0,2))    #riverEntrance_NE #100
+    objectType.append((loadImage('final_data/ground_dirtRiverEntrance_NW.png',72,151),0,0,2))    #riverEntrance_NW #101
 
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverEnd_SE.png',72,151),0,0,2))    #riverEnd_SE #102
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverEnd_SW.png',72,151),0,0,2))    #riverEnd_SW #103
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverEnd_NE.png',72,151),0,0,2))    #riverEnd_NE #104
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverEnd_NW.png',72,151),0,0,2))    #riverEnd_NW #105
+    objectType.append((loadImage('final_data/ground_dirtRiverEnd_SE.png',72,151),0,0,2))    #riverEnd_SE #102
+    objectType.append((loadImage('final_data/ground_dirtRiverEnd_SW.png',72,151),0,0,2))    #riverEnd_SW #103
+    objectType.append((loadImage('final_data/ground_dirtRiverEnd_NE.png',72,151),0,0,2))    #riverEnd_NE #104
+    objectType.append((loadImage('final_data/ground_dirtRiverEnd_NW.png',72,151),0,0,2))    #riverEnd_NW #105
 
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverCorner_SE.png',72,151),0,0,2)) #riverCorner_SE #106
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverCorner_SW.png',72,151),0,0,2)) #riverCorner_SW #107
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverCorner_NE.png',72,151),0,0,2)) #riverCorner_NE #108
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverCorner_NW.png',72,151),0,0,2)) #riverCorner_NW #109
+    objectType.append((loadImage('final_data/ground_dirtRiverCorner_SE.png',72,151),0,0,2)) #riverCorner_SE #106
+    objectType.append((loadImage('final_data/ground_dirtRiverCorner_SW.png',72,151),0,0,2)) #riverCorner_SW #107
+    objectType.append((loadImage('final_data/ground_dirtRiverCorner_NE.png',72,151),0,0,2)) #riverCorner_NE #108
+    objectType.append((loadImage('final_data/ground_dirtRiverCorner_NW.png',72,151),0,0,2)) #riverCorner_NW #109
 
-    objectType.append((loadImage('assets/final_data/cliffGrey_steps_SE.png',107,151),0,0,0)) # grey steps_SE #110
-    objectType.append((loadImage('assets/final_data/cliffGrey_steps_SW.png',107,151),0,0,0)) # grey steps_SW #111
-    objectType.append((loadImage('assets/final_data/cliffGrey_steps_NE.png',107,151),0,0,0)) # grey steps_NE #112
-    objectType.append((loadImage('assets/final_data/cliffGrey_steps_NW.png',107,151),0,0,0)) # grey steps_NW #113    
+    objectType.append((loadImage('final_data/cliffGrey_steps_SE.png',107,151),0,0,0)) # grey steps_SE #110
+    objectType.append((loadImage('final_data/cliffGrey_steps_SW.png',107,151),0,0,0)) # grey steps_SW #111
+    objectType.append((loadImage('final_data/cliffGrey_steps_NE.png',107,151),0,0,0)) # grey steps_NE #112
+    objectType.append((loadImage('final_data/cliffGrey_steps_NW.png',107,151),0,0,0)) # grey steps_NW #113    
 
-    objectType.append((loadImage('assets/final_data/coinGold_SE.png',54,46),70,30,0)) # coin_SE #114
-    objectType.append((loadImage('assets/final_data/coinGold_SW.png',54,46),70,30,0)) # coin_SW #115
-    objectType.append((loadImage('assets/final_data/coinGold_NE.png',54,46),70,30,0)) # coin_NE #116
-    objectType.append((loadImage('assets/final_data/coinGold_NW.png',54,46),70,30,0)) # coin_NW #117
+    objectType.append((loadImage('final_data/coinGold_SE.png',54,46),70,30,0)) # coin_SE #114
+    objectType.append((loadImage('final_data/coinGold_SW.png',54,46),70,30,0)) # coin_SW #115
+    objectType.append((loadImage('final_data/coinGold_NE.png',54,46),70,30,0)) # coin_NE #116
+    objectType.append((loadImage('final_data/coinGold_NW.png',54,46),70,30,0)) # coin_NW #117
 
-    objectType.append((loadImage('assets/final_data/ground_dirt_NW.png'              ,72,151),0,0,2)) # riverdirt   #118
-    objectType.append((loadImage('assets/final_data/ground_dirtRiverTile_NW.png'     ,72,151),0,0,2)) # riverTile   #119
-    objectType.append((loadImage('assets/final_data/stone_tall2_NE.png'   ,350,330),-50,-260,0))      # rock        #120
-    objectType.append((loadImage('assets/final_data/snowmanFancy_SW.png'  ,350,210),-59,-243,0))      # snow man    #121   
+    objectType.append((loadImage('final_data/ground_dirt_NW.png'              ,72,151),0,0,2)) # riverdirt   #118
+    objectType.append((loadImage('final_data/ground_dirtRiverTile_NW.png'     ,72,151),0,0,2)) # riverTile   #119
+    objectType.append((loadImage('final_data/stone_tall2_NE.png'   ,350,330),-50,-260,0))      # rock        #120
+    objectType.append((loadImage('final_data/snowmanFancy_SW.png'  ,350,210),-59,-243,0))      # snow man    #121   
 
 ##############################################
     agentType  = []
     agentType.append(None) # default -- never drawn
 
-    agentType.append((loadImage('assets/final_data/invader_ret_new.png'   ,107,128),0,0,0)) # invader - predators - newborn #1
-    agentType.append((loadImage('assets/final_data/invader_ret.png'       ,107,128),0,0,0)) # invader - predator            #2
-    agentType.append((loadImage('assets/final_data/invader_ret_hungry.png',107,128),0,0,0)) # invader - predator - hungry   #3
+    agentType.append((loadImage('final_data/invader_ret_new.png'   ,107,128),0,0,0)) # invader - predators - newborn #1
+    agentType.append((loadImage('final_data/invader_ret.png'       ,107,128),0,0,0)) # invader - predator            #2
+    agentType.append((loadImage('final_data/invader_ret_hungry.png',107,128),0,0,0)) # invader - predator - hungry   #3
 
-    agentType.append((loadImage('assets/final_data/ghost_pinky_new.png'   ,107,128),0,0,0)) # pink ghost - prey - new      #4
-    agentType.append((loadImage('assets/final_data/ghost_pinky.png'       ,107,128),0,0,0)) # pink ghost - prey            #5
-    agentType.append((loadImage('assets/final_data/ghost_pinky_hungry.png',107,128),0,0,0)) # pink ghost - prey - hungry   #6
+    agentType.append((loadImage('final_data/ghost_pinky_new.png'   ,107,128),0,0,0)) # pink ghost - prey - new      #4
+    agentType.append((loadImage('final_data/ghost_pinky.png'       ,107,128),0,0,0)) # pink ghost - prey            #5
+    agentType.append((loadImage('final_data/ghost_pinky_hungry.png',107,128),0,0,0)) # pink ghost - prey - hungry   #6
 
-    agentType.append((loadImage('assets/final_data/ghost.png'      ,107,128),0,0,0)) # purple ghost - dropper              #7
+    agentType.append((loadImage('final_data/ghost.png'      ,107,128),0,0,0)) # purple ghost - dropper              #7
 
-    agentType.append((loadImage('assets/final_data/player2.png'    ,107,128),0,0,0))   # player                              #8
+    agentType.append((loadImage('final_data/player2.png'    ,107,128),0,0,0))   # player                              #8
 
 def resetImages():
     global tileTotalWidth, tileTotalHeight, scaleMultiplier, tileVisibleHeight,  tileTotalWidthOriginal, tileTotalHeightOriginal,\
@@ -378,12 +377,12 @@ rockId    = 108
 snowmanId = 109
 
 imagesShown = [
-    loadImage('assets/final_data/player2.png'    ,107,128),
-    loadImage('assets/final_data/coinGold_SE.png',54,46),
-    loadImage('assets/final_data/ghost.png'      ,107,128),
-    loadImage('assets/final_data/ghost_pinky.png',107,128),
-    loadImage('assets/final_data/invader_ret.png',107,128),
-    loadImage('assets/final_data/invader_ret_hungry.png',107,128),
+    loadImage('final_data/player2.png'    ,107,128),
+    loadImage('final_data/coinGold_SE.png',54,46),
+    loadImage('final_data/ghost.png'      ,107,128),
+    loadImage('final_data/ghost_pinky.png',107,128),
+    loadImage('final_data/invader_ret.png',107,128),
+    loadImage('final_data/invader_ret_hungry.png',107,128),
 ]
 ###
 
